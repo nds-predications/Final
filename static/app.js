@@ -9,38 +9,20 @@ var data = d3.json('/model_1415')
   console.log(data);
 })
 
-// data.forEach(function(data) {
-//     console.log(data);
-//     var row = tbody.append("a href");
+var tooltip = d3.select("data-tooltip")
+    .append("tool")
+    .style("position", "absolute")
+    .style("z-index", "10")
+    .style("visibility", "hidden")
+    .style("background", "#000")
+    .text("a simple tooltip");
 
-//     Object.entries(data).forEach(function([key, value]) {
-//         console.log(key, value);
-//       });
-//     }); 
-
-// Get the modal
-var modal = document.getElementById('myModal');
-
-object.addEventListener("mouseover", myScript); 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal 
-btn.hover = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.hover = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.hover = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+d3.select("data-tooltip")
+  .selectAll("tool")
+    .data(data)
+    .enter().append("tool")
+    .style("width", function(d) { return x(d) + "px"; })
+    .text(function(d) { return d; })
+    .on("mouseover", function(d){tooltip.text(d); return tooltip.style("visibility", "visible");})
+    .on("mousemove", function(){return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
+    .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
