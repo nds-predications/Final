@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/style.css"> 
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Herr+Von+Muellerhoff' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Istok+Web|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+
+
+
+<title>NDS-Predictions Hero Model</title>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-wrap">
+            <p class="intro" id="intro">NBA</p>
+            <h1 id="headline">Playoffs</h1>
+            <p class="year"><i class="fa fa-star"></i> 2015 <i class="fa fa-star"></i></p>
+            <p>NDS-Predictions TCM Model</p>
+        </div>
+    </header>
+
+<!-- {} for datajava script for condiation  -->
+<!-- <h1><b>NBA 2017 Playoff Brackets </b></h1> -->
+    <table class="a-left" style="width: 100%"> 
+        <tbody>
+            <div class="main">
+    
+                <tr>
+                    <td colspan="4">
+                        <div class="WC" style=" float: right ;margin: 10px 10px ;" >Western Conference</div>
+                    </td>
+                    <td colspan="9">
+                        <div class="EC" style=" float: right ;margin: 20px 10px ;" >Eastern Conference</div>
+                    </td>
+                </tr>
+                <tr class="main-2">
+
+                    <td colspan="3">  
+                        <div style="width: 85px ; height: 1px ;"class="CF" ></div>
+                    </td>
+                    <td colspan="3">
+                        <div style="width: 85px ;  height: 1px ; "class="CF">Conference<br>Semifinals</div>
+                    </td>
+                    <td colspan="3">
+                        <div style="width: 85px ;  height: 1px ;  "class="CF">Conference<br>Finals</div>
+                    </td>
+                    <td colspan="1">
+                        <div style="width: 85px ;  height: 1px ; " class="FF"></div>
+                    </td>
+                    <td colspan="3">
+                        <div style="width: 85px ;  height: 1px ; " class="CFE">Conference<br>Finals</div>
+                    </td>
+                    <td colspan="3">
+                        <div style="width: 85px ;  height: 1px ; " class="CFE">Conference<br>Semifinals</div>
+                    <!-- </td>
+                    <td colspan="0">  
+                        <div style="width: 85px ; height: 1px ;"class="CF" ></div>
+                    </td> -->
+                </tr></div>  
+        
+            <tr>
+                <td colspan="3" >	
+                    <div class="margen-b10 clearfix">
+                        <div class="game clearfix">
+                            <div class=" color-w" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 50px"  ></div>
+                            <img src="/static/icons/Golden_State_Warriors.svg" alt="GSW" height="64" width="64">  			 <div class="gameresult right negri" style=" margin: 15px 40px ; "><button id onmouseover= "myScript">GSW</a> </div>
+                        </div>
+                        <div class="game clearfix">
+                            <div class=" color-w" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 50px "></div>
+                            <img src="/static/icons/New_Orleans_Pelicans.svg" alt="NOP" height=64 width="64">			 <div class="gameresult right " style="margin: 15px 40px ; "><a href="../playoffs_series/2017_warriors_vs_trail_blazers.htm">NOP</a></div>
+                        </div>
+                    </div>			   
+    
+        
+                    <div class="margen-b10 clearfix">
+                        <div class="game clearfix">
+                            <div class=" color-w" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 50px ;  "></div>
+                            <img src="/static/icons/Portland_Trail_Blazers.svg" alt="POR" height="64" width="64">			 <div class="gameresult right " style="margin: 15px 40px ; "><a href="../playoffs_series/2017_clippers_vs_jazz.htm">POR</a>	</div>
+                        </div>
+                        <div class="game clearfix">
+                            <div class=" color-w" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 50px   "></div>
+                            <img src="/static/icons/Memphis_Grizzlies.svg" alt="MEM" height="64" width="64">			 <div class="gameresult right negri" style="margin: 15px 40px ; "><a href="../playoffs_series/2017_clippers_vs_jazz.htm">MEM</a> </div>
+                        </div>
+                    </div>
+        
+                    <div class="margen-b10 clearfix">
+                        <div class="game clearfix">
+                            <div class=" color-w" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 50px  "></div>
+                            <img src="/static/icons/Clippers.svg" alt="LAC" height="64" width="64">				 <div class="gameresult right negri" style="margin: 15px 40px ; "><a href="../playoffs_series/2017_rockets_vs_thunder.htm">LAS</a>			   </div>
+                        </div>
+                        <div class="game clearfix">
+                            <div class=" color-w" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 50px ;  "></div>
+                            <img src="/static/icons/San_Antonio_Spurs.svg" alt="SAS" height="64" width="64">			 <div class="gameresult right " style="margin: 15px 40px ; "><a href="../playoffs_series/2017_rockets_vs_thunder.htm">SAS</a>			   </div>
+                        </div>
+                    </div>   
+                
+        
+                    <div class="margen-b10 clearfix">
+                        <div class="game clearfix">
+                            <div class=" color-w" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 50px ;  "></div>
+                            <img src="/static/icons/Houston_Rockets.svg" alt="HOU" height="64" width="64">			 <div class="gameresult right negri" style="margin: 15px 40px ; "><a href="../playoffs_series/2017_spurs_vs_grizzlies.htm">HOU</a>			   </div>
+                        </div>
+                        <div class="game clearfix">
+                            <div class=" color-w" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 50px ; "></div>
+                            <img src="/static/icons/Dallas_Mavericks.svg" alt="DAL" height="64" width="64">				 <div class="gameresult right " style="margin: 15px 40px ; "><a href="../playoffs_series/2017_spurs_vs_grizzlies.htm">DAL</a>			   </div>
+                        </div>
+                    </div>	   
+                </td>
+
+                <td colspan="1">
+                    <div class="margen-b10 clearfix">
+                        <div class="game clearfix">
+                            <div class=" color-w" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px ;  "></div>
+                            <img src="/static/icons/Golden_State_Warriors.svg" alt="MEM" height="64" width="64">			 <div class="gameresult right negri" style=" margin: 20px 40px ; "><a href="../playoffs_series/2017_warriors_vs_jazz.htm">GSW</a>			   </div>
+                        </div>
+                        <div class="game clearfix">
+                            <div class=" color-w" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px ;  "></div>
+                            <img src="/static/icons/Memphis_Grizzlies.svg" alt="MEM" height="64" width="64">	 <div class="gameresult right " style=" margin: 20px 40px ; "><a href="../playoffs_series/2017_warriors_vs_jazz.htm">MEM</a>			   </div>
+                        </div>
+                    </div>		  
+        
+                    <div class="margen-b10 clearfix">
+                        <div class="game clearfix">
+                            <div class=" color-w" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px ;  "></div>
+                            <img src="/static/icons/Houston_Rockets.svg" alt="LAC" height="64" width="64">	 <div class="gameresult right " style=" margin: 20px 40px ; "><a href="../playoffs_series/2017_spurs_vs_rockets.htm">HOU</a>			   </div>
+                        </div>
+                        <div class="game clearfix">
+                            <div class=" color-w" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px ;  "></div>
+                            <img src="/static/icons/San_Antonio_Spurs.svg" alt="LAC" height="64" width="64">			 <div class="gameresult right negri" style=" margin: 20px 40px ; "><a href="../playoffs_series/2017_spurs_vs_rockets.htm">SAS</a>			   </div>
+                        </div>
+                    </div>
+                </td>
+                <td colspan="3">
+                    <div class="margen-b10 clearfix">
+                        <div class="game clearfix">
+                            <div class=" color-w" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px ;  "></div>
+                            <img src="/static/icons/Golden_State_Warriors.svg" alt="MEM" height="64" width="64">			 <div class="gameresult right negri" style=" margin: 20px 40px; "><a href="../playoffs_series/2017_warriors_vs_spurs.htm">GSW</a>			   </div>
+                        </div>
+                        <div class="game clearfix">
+                            <div class=" color-w" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px;  "></div>
+                            <img src="/static/icons/San_Antonio_Spurs.svg" alt="LAC" height="64" width="64">			 <div class="gameresult right " style= "margin: 20px 40px ; "><a href="../playoffs_series/2017_warriors_vs_spurs.htm">SAS</a>			   </div>
+                        </div>
+                    </div>	  
+                </td>                                               
+                 <!-- Champions -->
+                <td colspan="4">
+                    <div class="margen-b10 clearfix">
+                        <div class="game clearfix rd-ac-al">
+                            <div class=" color-w" style=" float: center ; min-height: 15px ; width: 4px ; margin-right: 1px ;  "></div>
+                            <img src="/static/icons/Golden_State_Warriors.svg" alt="MEM" height="128" width="128"><div class="gameresult right negri no-1" style="margin:10px 40px ; "><a href="../playoffs_series/2017_warriors_vs_cavaliers.htm">Winner</a>			   </div>
+                        </div>			 
+                        <div class="game clearfix rd-ac-al">
+                            <div class=" color-e" style=" float: center ; min-height: 15px ; width: 4px ; margin-right: 1px ;  "></div>
+                            <img src="/static/icons/Cleveland_Cavaliers.svg" alt="MEM" height="128" width="128"><div class="gameresult right  no-1" style="margin:10px 40px ; "><a href="../playoffs_series/2017_warriors_vs_cavaliers.htm">Runner-up</a>			   </div>
+                        </div>
+                    </div>   
+                </td>
+    
+    
+                <td colspan="3">
+                    <div class="margen-b10 clearfix">
+                        <div class="game clearfix">
+                            <div class=" color-e" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px ;  "></div>
+                            <img src="/static/icons/Cleveland_Cavaliers.svg" alt="CLE" height="64" width="64">	 <div class="gameresult right " style="margin:20px ; "><a href="../playoffs_series/2017_celtics_vs_cavaliers.htm">CLE</a>			   </div>
+                        </div>
+                        <div class="game clearfix">
+                            <div class=" color-e" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px ;  "></div>
+                            <img src="/static/icons/Atlanta_Hawks.svg" alt="ALT" height="64" width="64">			 <div class="gameresult right negri" style="margin:20px ; "><a href="../playoffs_series/2017_celtics_vs_cavaliers.htm">ALT</a>			   </div>
+                        </div>
+                    </div>			   
+                </td>
+            
+
+                <td colspan="3">
+                    <div class="margen-b10 clearfix">
+                        <div class="game clearfix">
+                            <div class=" color-e" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px ;  "></div>
+                                <img src="/static/icons/Atlanta_Hawks.svg" alt="ALT" height="64" width="64">			 <div class="gameresult right negri" style="margin:20px; "><a href="">ALT</a></div>
+                        </div>
+                        <div class="game clearfix">
+                            <div class=" color-e" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px ;  "></div>
+                            <img src="/static/icons/Washington_Wizards.svg" alt="WAS" height="64" width="64">				 <div class="gameresult right " style="margin: 20px; "><a href="">WAS</a>			   </div>
+                        </div>
+                    </div>
+
+                    <!-- <div style="height: 60px ; "></div> -->
+                    
+
+                    <div class="margen-b10 clearfix">
+                        <div class="game clearfix">
+                            <div class=" color-e" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px ;  "></div>
+                            <img src="/static/icons/Chicago_Bulls.svg" alt="CHI" height="64" width="64">			 <div class="gameresult right " style="margin: 20px ; "><a href="../playoffs_series/2017_cavaliers_vs_raptors.htm">CHI</a>			   </div>
+                        </div>
+                        <div class="game clearfix">
+                            <div class=" color-e" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px ;  "></div>
+                            <img src="/static/icons/Cleveland_Cavaliers.svg" alt="CLE" height="64" width="64">				 <div class="gameresult right negri" style="margin:20px ; "><a href="../playoffs_series/2017_cavaliers_vs_raptors.htm">CLE</a>			   </div>
+                        </div>
+                    </div>
+                </td>
+                <td colspan="4" >
+                    <div class="margen-b10 clearfix">
+                        <div class="game clearfix">
+                            <div class=" color-e" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px; margin: 30px 1px;  "></div>
+                            <img src="/static/icons/Atlanta_Hawks.svg" alt="ALT" height="64" width="64">		 <div class="gameresult right negri" style="margin:15px 4px ; "><a href="../playoffs_series/2017_celtics_vs_bulls.htm">ALT</a>			   </div>
+                        </div>
+                        <div class="game clearfix">
+                            <div class=" color-e" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px; margin: 30px 1px;  "> </div>
+                            <img src="/static/icons/Brooklyn_Nets.svg" alt="BKN" height="64" width="64">			 <div class="gameresult right " style="margin:15px 4px ; "><a href="../playoffs_series/2017_celtics_vs_bulls.htm">BKN</a>			   </div> 
+                        </div>
+                    </div>
+                    <div class="margen-b10 clearfix">
+                        <div class="game clearfix">
+                            <div class=" color-e" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px ;margin: 30px 1px; "></div>
+                            <img src="/static/icons/Toronto_Raptors.svg" alt="TOR" height="64" width="64"> <div class="gameresult right negri" style="margin:15px 4px ; "><a href="../playoffs_series/2017_wizards_vs_hawks.htm">TOR</a>			   </div>
+                    
+                        </div>
+                
+                        <div class="game clearfix">
+                            <div class=" color-e" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px ;margin: 30px 1px;  "></div>
+                            <img src="/static/icons/Washington_Wizards.svg" alt="WAS" height="64" width="64">			 <div class="gameresult right " style="margin:15px 4px ; "><a href="../playoffs_series/2017_wizards_vs_hawks.htm">WAS</a>			   </div>
+                    
+                        </div>
+                    </div>  
+                    <div class="margen-b10 clearfix">
+                        <div class="game clearfix">
+                            <div class=" color-e" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px; margin: 30px 1px;  "></div>
+                            <img src="/static/icons/Cleveland_Cavaliers.svg" alt="CLE" height="64" width="64">		 <div class="gameresult right negri" style="margin:15px 4px ; "><a href="../playoffs_series/2017_raptors_vs_bucks.htm">CLE</a>			   </div>
+                        </div>
+                    
+                        <div class="game clearfix">
+                            <div class=" color-e" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px ;margin: 30px 1px; "></div>
+                            <img src="/static/icons/Boston_Celtics.svg" alt="BOS" height="64" width="64"> <div class="gameresult right " style="margin:15px 4px ; "><a href="../playoffs_series/2017_raptors_vs_bucks.htm">BOS</a>			   </div>
+                        </div>
+                    </div>		 
+            
+
+                    <div class="margen-b10 clearfix">
+                        <div class="game clearfix">
+                            <div class=" color-e" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px ;margin: 30px 1px; "></div>
+                            <img src="/static/icons/Chicago_Bulls.svg" alt="CHI" height="64" width="64">			 <div class="gameresult right negri" style="margin:20px 4px ; "><a href="../playoffs_series/2017_cavaliers_vs_pacers.htm">CHI</a>			   </div>
+                        </div>
+                        <div class="game clearfix">
+                            <div class=" color-e" style=" float: left ; min-height: 15px ; width: 4px ; margin-right: 3px ;margin: 30px 1px; "></div>
+                            <img src="/static/icons/Milwaukee_Bucks.svg" alt="MIL" height="64" width="64">			 <div class="gameresult right " style="margin:20px 4px ; "><a href="../playoffs_series/2017_cavaliers_vs_pacers.htm">MIL</a>			   </div>
+                        </div>
+                    </div> 
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<footer>
+    <script src="static/app.js"></script>
+
+    <section class="share">
+        <div class="share-wrap">
+            <a class="share-icon" href="https://twitter.com/basement47"><i class="fa fa-twitter"></i></a>
+            <a class="share-icon" href="#"><i class="fa fa-facebook"></i></a>
+            <a class="share-icon" href="#"><i class="fa fa-envelope"></i></a>
+        </div>
+    </section>
+
+</footer>
